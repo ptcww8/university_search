@@ -1,43 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="en-us">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Listing Grid View</title>
+      <meta name='robots' content='noindex,nofollow' />
+      <link rel='dns-prefetch' href='https://fonts.googleapis.com/' />
+      <link rel='dns-prefetch' href='https://s.w.org/' />
+      <link rel="alternate" type="application/rss+xml" title="Direo &raquo; Feed" href="https://demo.directorist.com/theme/direo/feed/" />
+      <link rel="alternate" type="application/rss+xml" title="Direo &raquo; Comments Feed" href="https://demo.directorist.com/theme/direo/comments/feed/" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      <link rel='stylesheet' id='bdmi_main_css-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/direo-extension/includes/directorist-pricing-plans/assets/css/main.css?ver=111' type='text/css' media='all' />
+      <link rel='stylesheet' id='atpp_main_css-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/direo-extension/includes/directorist-pricing-plans/assets/css/main.css?ver=111' type='text/css' media='all' />
+      <link rel='stylesheet' id='leaf-style-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/directorist/templates/front-end/all-listings/maps/openstreet/css/openstreet.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='select2style-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/directorist/public/assets/css/select2.min.css?ver=6.5.7' type='text/css' media='all' />
+      <link rel='stylesheet' id='atbdp-bootstrap-style-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/directorist/public/assets/css/bootstrap.css?ver=6.5.7' type='text/css' media='all' />
+      <link rel='stylesheet' id='atbdp-font-awesome-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/directorist/public/assets/css/font-awesome.min.css?ver=6.5.7' type='text/css' media='all' />
+      <link rel='stylesheet' id='atbdp-line-awesome-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/directorist/public/assets/css/line-awesome.min.css?ver=6.5.7' type='text/css' media='all' />
+      <link rel='stylesheet' id='atbdp-style-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/directorist/public/assets/css/style.css?ver=6.5.7' type='text/css' media='all' />
+      <link rel='stylesheet' id='atbd_googlefonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A400%2C500&amp;ver=6.5.7' type='text/css' media='all' />
+      <link rel='stylesheet' id='atmodal-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/directorist/public/assets/css/atmodal.css?ver=6.5.7' type='text/css' media='all' />
+      <link rel='stylesheet' id='wp-color-picker-css'  href='https://demo.directorist.com/theme/direo/wp-admin/css/color-picker.min.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='wp-block-library-css'  href='https://demo.directorist.com/theme/direo/wp-includes/css/dist/block-library/style.min.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='wc-block-vendors-style-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style.css?ver=3.8.1' type='text/css' media='all' />
+      <link rel='stylesheet' id='wc-block-style-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=3.8.1' type='text/css' media='all' />
+      <link rel='stylesheet' id='contact-form-7-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.3.2' type='text/css' media='all' />
+      <link rel='stylesheet' id='woocommerce-layout-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=4.8.0' type='text/css' media='all' />
+      <link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=4.8.0' type='text/css' media='only screen and (max-width: 768px)' />
+      <link rel='stylesheet' id='woocommerce-general-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=4.8.0' type='text/css' media='all' />
+      <style id='woocommerce-inline-inline-css' type='text/css'>
+         .woocommerce form .form-row .required { visibility: visible; }
+      </style>
+      <link rel='stylesheet' id='bdbh_main_style2-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/direo-extension/includes/directorist-business-hours//assets/css/bh-main.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='bdbh_main_style-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/direo-extension/includes/directorist-business-hours//assets/css/bh-main.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='dcl_main_css-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/direo-extension/includes/directorist-claim-listing/assets/css/main.css?ver=111' type='text/css' media='all' />
+      <link rel='stylesheet' id='faqs_main_style-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/direo-extension/includes/directorist-faqs//assets/css/main.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='atbdp_social_login_main-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/direo-extension/includes/directorist-social-login/assets/public/css/main.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='bdm-main-css-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/direo-extension/includes/directorist-listings-map//public/assets/css/style.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='direo-fonts-css'  href='https://fonts.googleapis.com/css?family=Muli:400,400i,600,700&#038;subset=arabic' type='text/css' media='all' />
+      <link rel='stylesheet' id='bootstrap-css'  href='https://demo.directorist.com/theme/direo/wp-content/themes/direo/vendor_assets/css/bootstrap/bootstrap.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='fontawesome-css'  href='https://demo.directorist.com/theme/direo/wp-content/themes/direo/vendor_assets/css/fontawesome.min.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='line-awesome-css'  href='https://demo.directorist.com/theme/direo/wp-content/themes/direo/vendor_assets/css/line-awesome.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='mCustomScrollbar-css'  href='https://demo.directorist.com/theme/direo/wp-content/themes/direo/vendor_assets/css/jquery.mCustomScrollbar.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='owl-carousel-css'  href='https://demo.directorist.com/theme/direo/wp-content/themes/direo/vendor_assets/css/owl.carousel.min.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='magnific-popup-css'  href='https://demo.directorist.com/theme/direo/wp-content/themes/direo/vendor_assets/css/magnific-popup.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='select2-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/woocommerce/assets/css/select2.css?ver=4.8.0' type='text/css' media='all' />
+      <link rel='stylesheet' id='slick-css'  href='https://demo.directorist.com/theme/direo/wp-content/themes/direo/vendor_assets/css/slick.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='direo-style-css'  href='https://demo.directorist.com/theme/direo/wp-content/themes/direo/style.css?ver=5.6' type='text/css' media='all' />
+      <link rel='stylesheet' id='elementor-icons-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.9.1' type='text/css' media='all' />
+      <link rel='stylesheet' id='elementor-animations-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.0.16' type='text/css' media='all' />
+      <link rel='stylesheet' id='elementor-frontend-legacy-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.0.16' type='text/css' media='all' />
+      <link rel='stylesheet' id='elementor-frontend-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.0.16' type='text/css' media='all' />
+      <link rel='stylesheet' id='elementor-post-2616-css'  href='https://demo.directorist.com/theme/direo/wp-content/uploads/elementor/css/post-2616.css?ver=1610440004' type='text/css' media='all' />
+      <link rel='stylesheet' id='font-awesome-5-all-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.0.16' type='text/css' media='all' />
+      <link rel='stylesheet' id='font-awesome-4-shim-css'  href='https://demo.directorist.com/theme/direo/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.0.16' type='text/css' media='all' />
+      <link rel='stylesheet' id='elementor-global-css'  href='https://demo.directorist.com/theme/direo/wp-content/uploads/elementor/css/global.css?ver=1610440004' type='text/css' media='all' />
+      <link rel='stylesheet' id='elementor-post-1997-css'  href='https://demo.directorist.com/theme/direo/wp-content/uploads/elementor/css/post-1997.css?ver=1610454728' type='text/css' media='all' />
+      <link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.6' type='text/css' media='all' />
+      <script type='text/javascript' src='https://demo.directorist.com/theme/direo/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+      <script type='text/javascript' src='https://demo.directorist.com/theme/direo/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+      
+      <script type='text/javascript' src='https://demo.directorist.com/theme/direo/wp-content/themes/direo/vendor_assets/js/bootstrap/bootstrap.min.js' id='bootstrap-js'></script>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      <script type='text/javascript' src='https://demo.directorist.com/theme/direo/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.0.16' id='font-awesome-4-shim-js'></script>
+      <link rel="https://api.w.org/" href="https://demo.directorist.com/theme/direo/wp-json/" />
+      <link rel="alternate" type="application/json" href="https://demo.directorist.com/theme/direo/wp-json/wp/v2/pages/1997" />
+      <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://demo.directorist.com/theme/direo/xmlrpc.php?rsd" />
+      <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://demo.directorist.com/theme/direo/wp-includes/wlwmanifest.xml" />
+      <link rel='shortlink' href='https://demo.directorist.com/theme/direo/?p=1997' />
+      <link rel="alternate" type="application/json+oembed" href="https://demo.directorist.com/theme/direo/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.directorist.com%2Ftheme%2Fdireo%2Flisting-grid-view%2F" />
+      <link rel="alternate" type="text/xml+oembed" href="https://demo.directorist.com/theme/direo/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdemo.directorist.com%2Ftheme%2Fdireo%2Flisting-grid-view%2F&#038;format=xml" />
+      <link rel='canonical' href='index.html' />
+      <link rel="icon" href="https://demo.directorist.com/theme/direo/wp-content/uploads/2019/10/fevicon.png" sizes="32x32" />
+      <link rel="icon" href="https://demo.directorist.com/theme/direo/wp-content/uploads/2019/10/fevicon.png" sizes="192x192" />
+      <link rel="apple-touch-icon" href="https://demo.directorist.com/theme/direo/wp-content/uploads/2019/10/fevicon.png" />
+      <meta name="msapplication-TileImage" content="https://demo.directorist.com/theme/direo/wp-content/uploads/2019/10/fevicon.png" />
+      <meta name="description" content="Filters All Items 6 Listings Found Sort By A to Z (title)Z to A (title)Latest listingsOldest listingsPopular listingsPrice (low to high)Price (high to low)Random listings Select a categoryHotelsOutdoo..." />
+      <meta property='og:site_name' content='Direo' />
+      <meta property='og:title' content='Listing Grid View | Direo' />
+      <meta property='og:description' content='Filters All Items 6 Listings Found Sort By A to Z (title)Z to A (title)Latest listingsOldest listingsPopular listingsPrice (low to high)Price (high to low)Random listings Select a categoryHotelsOutdoo...' />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+   </head>
+   <body class="page-template-default page page-id-1997 wp-custom-logo theme-direo woocommerce-no-js elementor-default elementor-kit-2616 elementor-page elementor-page-1997 atbd_content_active atbdp_preload">
+     <div id="root"></div>
+
+   </body>
 </html>
+<!-- Dynamic page generated in 1.567 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2021-01-21 12:57:20 -->
+<!-- Compression = gzip -->
+<!-- super cache -->
