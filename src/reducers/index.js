@@ -7,7 +7,7 @@ const initialState = {
   data: null,
   loading: false,
   error: null,
-  location: "ghana",
+  location: "choose a country",
   description:""
 }
  

@@ -43,8 +43,9 @@ class Header extends Component {
                                        <input className="form-control search_fields" type="text" name="q" defaultValue={this.props.description} onChange={e => this.setState({ description: e.target.value })} autocomplete="off" placeholder="Type a word in the university name" />
                                     </div>
                                     <div className="single_search_field search_category">
+                                      
                                        <select  name="in_cat" className="search_fields form-control" id="at_biz_dir-category" defaultValue={this.props.location} onChange={e => this.setState({ location: e.target.value })}>
-                                         <option value="">Select a country</option>
+                                         <option value="">Choose a country from the list</option>
                                          {GET_COUNTRY_LIST.map((country) => 
                                               
                                               <option value={country} >{country}</option>
