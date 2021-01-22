@@ -17,6 +17,14 @@ class Header extends Component {
       this.props.setLocation(this.state.location)
       this.props.getUniversitiesList(this.state.description, this.state.location)
     }
+   
+   handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      this.props.setDescription(this.state.description)
+      this.props.setLocation(this.state.location)
+      this.props.getUniversitiesList(this.state.description, this.state.location)
+    }
+  }
   
   
   
@@ -40,11 +48,11 @@ class Header extends Component {
                               <div className="atbd_seach_fields_wrapper" style={{backgroundColor:"lightgreen"}}>
                                  <div className="atbdp-search-form">
                                     <div className="single_search_field search_query">
-                                       <input className="form-control search_fields" type="text" name="q" defaultValue={this.props.description} onChange={e => this.setState({ description: e.target.value })} autocomplete="off" placeholder="Type a word in the university name" />
+                                       <input className="form-control search_fields" type="text" name="q" defaultValue={this.props.description} onKeyDown={this.handleKeyDown} onChange={e => this.setState({ description: e.target.value })} autocomplete="off" placeholder="Type a word in the university name" />
                                     </div>
                                     <div className="single_search_field search_category">
                                       
-                                       <select  name="in_cat" className="search_fields form-control" id="at_biz_dir-category" defaultValue={this.props.location} onChange={e => this.setState({ location: e.target.value })}>
+                                       <select  name="in_cat" className="search_fields form-control" id="at_biz_dir-category" defaultValue={this.props.location} onKeyDown={this.handleKeyDown} onChange={e => this.setState({ location: e.target.value })}>
                                          <option value="">Choose a country from the list</option>
                                          {GET_COUNTRY_LIST.map((country) => 
                                               

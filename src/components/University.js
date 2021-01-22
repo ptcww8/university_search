@@ -25,9 +25,14 @@ class University extends Component {
         </figure>
         <div className="atbd_listing_info">
            <div className="atbd_content_upper">
-              <h4 className="atbd_listing_title">
+              <h4 className="atbd_listing_title" style={{textAlign: "center"}}>
                  <a href={this.props.university.web_pages[0]} rel="noreferrer" target="_blank">{this.props.university.name}</a>
               </h4>
+            <div class="atbd_listing_meta">
+              <span class="atbd_upper_badge" style={{margin: "auto"}}>
+                <span class="atbd_badge atbd_badge_close">{this.props.university.country}</span>		</span>
+
+            </div>
            </div>
         </div>
      </article>
