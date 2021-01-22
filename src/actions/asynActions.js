@@ -6,7 +6,7 @@ import {
 export const getUniversitiesList = (description= "", country="") => async dispatch => {
   dispatch(getUniversitiesListStarted());
   try {
-    const res = await fetch(`https://cors-anywhere.herokuapp.com/http://universities.hipolabs.com/search?name=${description}&country=${country}`);
+    const res = await fetch(`https://cors-anywhere.herokuapp.com/http://universities.hipolabs.com/search?name_contains=${description}&country=${country}`);
     const data = await res.json();
     dispatch(getUniversitiesListSuccess(data));
   } catch (err) {
